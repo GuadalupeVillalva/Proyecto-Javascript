@@ -1,0 +1,300 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* HEADER */
+.nav__header {
+    background-image: url(./images/background.png);
+    padding-top: 0.1rem;
+    padding-bottom: 4.5rem;
+}
+
+.nav__logo img {
+    height: 50px;
+}
+
+.nav__a a {
+    color: #0D0D0D;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+.nav__a a:hover {
+    font-weight: 500;
+}
+
+.nav__a {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 0.2rem;
+}
+
+.nav__menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    margin: 0.5rem;
+    padding: 0.4rem;
+    align-items: center
+}
+
+.nav__title {
+    text-align: center;
+    margin-top: 4em;
+}
+
+.nav__title h1 { /* titulo pequeño del nav */
+    font-family: 'Assistant', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 1.4em;
+}
+
+.nav__title h2 {
+    /* titulo grande del nav */
+    font-family: 'Assistant', sans-serif;
+    font-weight: 800;
+    color: white;
+    font-size: 2.1em;
+}
+
+/* contenido principal */
+p {
+    color: #0D0D0D;
+}
+
+h3, h4, h5 { /* titulo divisas, titulo calcular  y titulo sucursales */
+    color: #0D0D0D;
+    font-weight: 800;
+    font-family: 'Assistant', sans-serif;
+    font-size: 2.4em;
+    margin: 4rem 0rem 1rem 0rem;
+    text-align: center;
+}
+
+main .moneda {
+    grid-area: moneda;
+}
+
+main .compra {
+    grid-area: compra;
+}
+
+main .venta {
+    grid-area: venta;
+}
+
+main .bandera {
+    grid-area: bandera;
+}
+
+.div__divisas {
+    display: grid;
+    grid-template-areas:
+        "moneda . compra venta";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    font-weight: 400;
+    font-size: 0.80em;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0rem 0.5rem;
+    background-color: #A9D8CF;
+    text-align: center;
+}
+
+#usa {
+    display: grid;
+    grid-template-areas:
+        "bandera moneda compra venta";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    padding-top: 0.50rem;
+}
+
+#uruguay {
+    display: grid;
+    grid-template-areas:
+        "bandera moneda compra venta";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+}
+
+#chile {
+    display: grid;
+    grid-template-areas:
+        "bandera moneda compra venta";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+}
+
+#brasil {
+    display: grid;
+    grid-template-areas:
+        "bandera moneda compra venta";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+}
+
+#australia {
+    display: grid;
+    grid-template-areas:
+        "bandera moneda compra venta";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+}
+
+#europa {
+    display: grid;
+    grid-template-areas:
+        "bandera moneda compra venta";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.div__divisas-moneda img { /* banderas */
+    height: 20px;
+    width: 30px;
+}
+
+#id .moneda {
+    margin-left: 0%;
+}
+
+.div__divisas-moneda {
+    font-weight: 300;
+    font-size: 0.70em;
+    margin-bottom: 1rem;
+    font-family: 'Work Sans', sans-serif;
+    padding-left: 0.7rem;
+    text-align: center;
+}
+
+.div__columa-divisas {
+    background-color: #F6F6F6;
+    padding: 0.2rem 0.1rem;
+    margin: 0rem 0.50rem;
+}
+
+#comprar-vender {
+    background-color: #F6F6F6;
+    border-color: #F6F6F6;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    padding: 0.30rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+
+#moneda {
+    background-color: #A9D8CF;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    border-color: #A9D8CF;
+    width: 6rem;
+}
+
+.div__calcular {
+    background-color: #A9D8CF;
+    padding: 0.5rem;
+    width: 9rem;
+}
+
+.div__calcular-main {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+.div__resultado {
+    background-color: #F6F6F6;
+    padding: 1rem;
+    display: flex;
+}
+
+button {
+    background-color: #A9D8CF;
+    border-color: #A9D8CF;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    margin: 1rem 0rem 0rem 0.5rem;
+}
+
+button:hover {
+    background-color: #038C7F;
+    border-color: #038C7F;
+}
+
+
+.pointer {
+    grid-area: pointer;
+}
+
+.title__sucursal {
+    grid-area: sucursal;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.direccion {
+    grid-area: direccion;
+    font-weight: 300;
+    font-size: 0.80em;
+}
+
+.div__sucursal {
+    display: grid;
+    grid-template-areas: "pointer sucursal ."
+                        "pointer direccion .";
+    grid-template-columns: 50px auto auto;
+    grid-template-rows: auto auto;
+    font-family: 'Work Sans', sans-serif;
+    margin: 1rem;
+}
+
+.div__sucursal img {
+    height: 40px;
+}
+
+.div__main-sucursales {
+    display: flex;
+    flex-direction: column;
+}
+
+.div__map {
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    width: 17rem;
+}
+
+.redes-sociales img {
+    width: 25px;
+    margin: 0.5rem;
+}
+
+footer {
+    background-color: #A9D8CF;
+    margin-top: 3.3rem;
+    text-align: center;
+    padding: 2rem 0rem;
+}
+
+footer p {
+    color: #858585;
+    font-size: 0.6em;
+}
+
+#exchange-capital-logo {
+    width: 10rem;
+    margin-bottom: 1rem;
+}

@@ -4,9 +4,157 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/logos/logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;800&family=Work+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <title> Exchange Capital </title>
 </head>
 <body>
-    <script src="index.js"></script>
+    <nav class="nav__header">
+        <div class="nav__menu">
+            <div class="nav__logo">
+                <a href="index.html"> <img src="./images/logos/exchange-capital.svg" alt="exchange-capital"> </a>
+            </div>
+            <div class="nav__a">
+                <a href="#title__divisas"> Divisas </a>
+                <a href="#title__calcular"> Calcular </a>
+                <a href="#title__sucursales"> Sucursales </a>
+            </div>
+        </div>
+        <div class="nav__title">
+            <h1> ONLINE, RÁPIDO, SEGURO,</h1>
+            <h2> CAMBIO DE MONEDA </h2>
+        </div>
+    </nav>
+    <main>
+        <div>
+            <h3> DIVISAS </h3>
+            <div>
+                <div class="div__divisas" id="columna">
+                    <p class="moneda"> Moneda </p>
+                    <p class="compra"> Compra </p>
+                    <p class="venta"> Venta </p>
+                </div>
+                <div class="div__columa-divisas">
+                    <div class="div__divisas-moneda" id="usa">
+                        <img src="./images/flags/usa-flag.webp" alt="estados-unidos" class="bandera">
+                        <p class="moneda"> Dólar estadounidense </p>
+                        <p class="compra"> $292,00 </p>
+                        <p class="venta"> $297,00 </p>
+                    </div>
+                    <div class="div__divisas-moneda" id="uruguay">
+                        <img src="./images/flags/uruguay-flag.png" alt="uruguay" class="bandera">
+                        <p class="moneda"> Peso uruguayo </p>
+                        <p class="compra"> $3,33 </p>
+                        <p class="venta"> $3,33 </p>
+                    </div>
+                    <div class="div__divisas-moneda" id="chile">
+                        <img src="./images/flags/chilean-flag.png" alt="chile" class="bandera">
+                        <p class="moneda"> Peso chileno </p>
+                        <p class="compra"> $15,15 </p>
+                        <p class="venta"> $15,20</p>
+                    </div>
+                    <div class="div__divisas-moneda" id="brasil">
+                        <img src="./images/flags/brazilian-flag.png" alt="brasil" class="bandera">
+                        <p class="moneda"> Real </p>
+                        <p class="compra"> $26,02 </p>
+                        <p class="venta"> $26,03 </p>
+                    </div>
+                    <div class="div__divisas-moneda" id="australia">
+                        <img src="./images/flags/australian-flag.png" alt="australia" class="bandera">
+                        <p class="moneda"> Dólar australiano </p>
+                        <p class="compra"> $92,00 </p>
+                        <p class="venta"> $110,00 </p>
+                    </div>
+                    <div class="div__divisas-moneda" id="europa">
+                        <img src="./images/flags/european-flag.png" alt="union-europea" class="bandera">
+                        <p class="moneda"> Euro </p>
+                        <p class="compra"> $138,52 </p>
+                        <p class="venta"> $138,59 </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <h4> CALCULAR </h4>
+            <select name="comprar-vender" id="comprar-vender">
+                <option value="comprar"> Comprar </option>
+                <option value="vender"> Vender </option>
+            </select>
+            <div class="div__calcular-main">
+                <div>
+                    <div class="div__calcular">
+                        <select name="moneda" id="moneda">
+                            <option value="moneda" disabled selected hidden> Moneda </option>
+                            <option value="dolar-usa"> Dólar estadounidense </option>
+                            <option value="peso-uruguay"> Peso uruguayo </option>
+                            <option value="peso-chile"> Peso chileno </option>
+                            <option value="real"> Real </option>
+                            <option value="dolar-australia"> Dólar australiano </option>
+                            <option value="euro"> Euro </option>
+                        </select>
+                    </div>
+                    <div class="div__resultado">
+                        <p> $ </p>
+                        <p> 1 </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="div__calcular">
+                        <p> Peso argentino </p>
+                    </div>
+                    <div class="div__resultado">
+                        <p> $ </p>
+                        <p> 200 </p>
+                    </div>
+                </div>
+            </div>
+            <button> COMPRAR </button>
+        </div>
+        <div>
+            <h5> SUCURSALES </h5>
+            <div class="div__main-sucursales">
+                <div>
+                    <div class="div__sucursal">
+                        <img src="./images/pointer.svg" alt="pointer" class="pointer">
+                        <h6 class="title__sucursal"> Buenos Aires </h6>
+                        <p class="direccion"> Calle 1 entre Calle 2 y Calle 3</p>
+                    </div>
+                    <div class="div__sucursal">
+                        <img src="./images/pointer.svg" alt="pointer" class="pointer">
+                        <h6 class="title__sucursal"> Córdoba </h6>
+                        <p class="direccion"> Calle 1 entre Calle 2 y Calle 3</p>
+                    </div>
+                    <div class="div__sucursal">
+                        <img src="./images/pointer.svg" alt="pointer" class="pointer">
+                        <h6 class="title__sucursal"> Mendoza </h6>
+                        <p class="direccion"> Calle 1 entre Calle 2 y Calle 3</p>
+                    </div>
+                </div>
+                <div class="div__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26184.6832534189!2d-57.87748180000001!3d-34.8792016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1660354794801!5m2!1ses-419!2sar"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <img src="./images/logos/logo-footer.svg" alt="exchange-capital-logo" id="exchange-capital-logo">
+        <div class="redes-sociales">
+            <img src="./images/facebook.png" alt="facebook">
+            <img src="./images/instagram.png" alt="instagram">
+            <img src="./images/linkedin.png" alt="linkedin">
+            <img src="./images/whatsapp.png" alt="whatsapp">
+        </div>
+        <p> © Copyright 2020 - 2022 Exchange Capital | Todos los derechos reservados </p>
+    </footer>
+    <script src="index.j"></script>
 </body>
 </html>
