@@ -9,8 +9,9 @@
 /* HEADER */
 .nav__header {
     background-image: url(./images/background.png);
+    background-attachment: fixed;
     padding-top: 0.1rem;
-    padding-bottom: 4.5rem;
+    padding-bottom: 7.5rem;
 }
 
 .nav__logo img {
@@ -187,7 +188,7 @@ main .bandera {
     font-weight: 400;
     padding: 0.30rem;
     border-radius: 0.5rem;
-    margin: 0.5rem;
+    margin: 3%;
 }
 
 #moneda {
@@ -195,13 +196,17 @@ main .bandera {
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     border-color: #A9D8CF;
-    width: 6rem;
+    width: 40vw;
+}
+
+#moneda:focus-visible, #comprar-vender:focus-visible, button:focus-visible {
+    outline: none;
 }
 
 .div__calcular {
     background-color: #A9D8CF;
     padding: 0.5rem;
-    width: 9rem;
+    width: 45vw;
 }
 
 .div__calcular-main {
@@ -209,6 +214,28 @@ main .bandera {
     justify-content: space-around;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
+}
+
+#moneda-extranjera, #peso-argentino {
+    background-color: #F6F6F6;
+    border-bottom-color: #a7a7a7;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.85em;
+    width: 30vw;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#moneda-extranjera:focus-visible, #peso-argentino:focus-visible,#peso-argentino:hover, #moneda-extranjera:hover {
+    outline: 0px;
+    border-bottom-color: black;
 }
 
 .div__resultado {
@@ -224,12 +251,12 @@ button {
     padding: 0.6rem;
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
-    margin: 1rem 0rem 0rem 0.5rem;
+    margin: 1rem 0rem 0rem 3%;
 }
 
 button:hover {
-    background-color: #038C7F;
-    border-color: #038C7F;
+    background-color: #369d93;
+    border-color: #369d93;
 }
 
 
@@ -256,7 +283,7 @@ button:hover {
     grid-template-columns: 50px auto auto;
     grid-template-rows: auto auto;
     font-family: 'Work Sans', sans-serif;
-    margin: 1rem;
+    margin: 1rem 5vw;;
 }
 
 .div__sucursal img {
@@ -274,7 +301,8 @@ button:hover {
 }
 
 iframe {
-    width: 17rem;
+    width: 91vw;
+    height: 53vh;
 }
 
 .redes-sociales img {
@@ -290,11 +318,164 @@ footer {
 }
 
 footer p {
-    color: #858585;
+    color: #005e4c;
     font-size: 0.6em;
 }
 
 #exchange-capital-logo {
     width: 10rem;
     margin-bottom: 1rem;
+}
+
+/* Media queries*/
+
+/* TABLET */
+@media only screen and (min-width: 576px) and (max-width: 991px){
+    .nav__menu {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav__a {
+        margin-top: 0%;
+        width: 50%;
+    }
+    .nav__logo img{
+        height: 8vh;
+        margin-left: 0.5rem;
+    }
+    .div__divisas-moneda {
+        font-size: 0.95em;
+    }
+    .title__sucursal {
+        font-size: 1.4em;
+    }
+    .direccion {
+        font-size: 1em;
+    }
+    .div__sucursal {
+        margin-left: 2rem;
+    }
+    .div__divisas {
+        font-size: 1.1em;
+    }
+    .nav__title h1 { /* titulo pequeño del nav */
+        font-size: 1.7em;
+    }
+    .nav__title h2 { /* titulo grande del nav */
+        font-size: 2.7em;
+    }
+    .nav__header {
+        padding-bottom: 10.5rem;
+    }
+    button {
+        width: 8rem;
+    }
+    #moneda {
+        font-size: 1em;
+    }
+    h3, h4, h5 {
+        font-size: 3em;
+    }
+    .div__resultado {
+        padding: 2rem;
+    }
+    .div__calcular{
+        height: 7vh;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 992px) {
+    .nav__menu {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav__a {
+        margin-top: 0%;
+        width: 40%;
+        font-size: 1.1em;
+    }
+    .nav__a a {
+        font-weight: 400;
+    }
+    .nav__logo img{
+        height: 10vh;
+        margin: 0.7rem;
+        margin-left: 2rem;
+    }
+    .nav__header{
+        padding-bottom: 0%;
+    }
+    .nav__title h1{
+        font-size: 3em;
+    }
+    .nav__title h2{
+        font-size: 5em;
+    }
+    .nav__title {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        height: 83vh;
+        width: 100vw;
+    }
+    .nav__menu {
+        padding: 0%;
+    }
+    h3, h4, h5 {
+        font-size: 3.3em;
+        margin-top: 10rem;
+    }
+    .div__divisas{
+        font-size: 1.3em;
+        padding: 0.8em 0em;
+    }
+    .div__divisas-moneda, button {
+        font-size: 1.1em;
+    }
+    .div__divisas-moneda img {
+        height: 8vh;
+        width: 6vw;
+    }
+    .moneda, .compra, .venta {
+        align-self: center;
+    }
+    #comprar-vender{
+        padding:0.6rem;
+        margin: 1rem 2.2vw;
+        font-size: 1em;
+    }
+    .div__resultado {
+        padding: 4rem 3rem;
+    }
+    #moneda, .div__calcular p, .div__resultado p, #moneda-extranjera, #peso-argentino{
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+    .div__calcular{
+        height: 7vh;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .div__main-sucursales{
+        flex-direction: row;
+        justify-content: center;
+    }
+    iframe {
+        width: 34vw;
+        height: 64vh;
+    }
+    .title__sucursal{
+        font-size: 1.4em;
+    }
+    .direccion{
+        font-size: 1.2em;
+        margin-top: 0.2rem ;
+    }
+    .div__sucursal{
+        align-items: center;
+    }
+    #div__tabla-divisas{
+        margin: 4rem;
+    }
 }
