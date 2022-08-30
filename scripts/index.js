@@ -1,31 +1,40 @@
-// mediante propmt solicito la información
-const tipoDeMoneda = prompt("¿Qué moneda desea vender/comprar?");
-const tipoDeCambio = prompt("¿Desea vender o comprar?");
-const cantidad = prompt("Si desea comprar ingrese el monto pesos argentinos, si desea vender ingrese el monto en la divisa");
+/* CALCULADORA con historial */
+function suma(a, b) { // declaro funcion para sumar
+  return a + b;
+}
+function resta(a, b) { // funcion para restar
+  return a - b;
+}
 
-// declaro una función para vender
-function vender(valorDivisa){
-    let resultado = parseInt(cantidad) * valorDivisa;
-    alert("Es equivalente a " + resultado + " pesos argentinos." );
-};
+let entrada = true; // hace que se inicie el bucle
 
+let historial = []; // array vacio
 
-//declaro una función para comprar
-function comprar(divisa, valorDivisa){
-    let resultado = parseInt(cantidad) / valorDivisa;
-    alert("Es equivalente a " + resultado + " " + divisa);
-};
-
-
-// si se ingresa un número o texto donde no se corresponde o no se ingresa nada se alerta que no es válido
-if((tipoDeMoneda === !NaN || tipoDeMoneda === "") || (tipoDeCambio === !NaN || tipoDeCambio === "") || (cantidad === NaN || cantidad === "")) {
-    alert("No es válido")
-} else if(tipoDeCambio === "VENDER" && tipoDeMoneda === "EURO"){ // Vender euro
-    vender(138);
-} else if(tipoDeCambio === "COMPRAR" && tipoDeMoneda === "EURO"){ // Comprar euro
-    comprar("euros", 140);
-} else if(tipoDeCambio === "VENDER" && tipoDeMoneda === "DOLAR"){ // Vender dólar
-    vender(292);
-} else if(tipoDeCambio === "COMPRAR" && tipoDeMoneda === "DOLAR"){ // Comprar Dólar
-    comprar("dólares", 297);
+while (entrada !== "4") {
+  entrada = prompt("Ingrese '1' para hacer una suma y '2' para restar. Si desea ver el historial ingrese '3'. Si desea salir '4'"); // redeclaro la variable 
+  if (entrada === "1") {
+    const primerNumero = parseInt(prompt("Ingrese el primer número"));
+    const segundoNumero = parseInt(prompt("Ingrese el segundo número"));
+    let resultado = suma(primerNumero, segundoNumero);
+    alert("El resultado de la suma es " + resultado);
+    if(!isNaN(resultado)){
+         historial.unshift(resultado); // hace push al resultado
+    } else {
+        alert("No es válido")
+    }
+  } else if (entrada === "2") {
+    const primerNumero = parseInt(prompt("Ingrese el primer número"));
+    const segundoNumero = parseInt(prompt("Ingrese el segundo número"));
+    resultado = resta(primerNumero, segundoNumero);
+    alert("El resultado de la resta es " + resultado);
+    if(!isNaN(resultado)){
+        historial.unshift(resultado);
+    } else {
+        alert("No es válido")
+    }
+  } else if (entrada === "3") {
+    alert(historial);
+  } else {
+    alert("No es válido");
+  }
 }
