@@ -42,45 +42,5 @@ while (entrada !== "5") {
   } else if(entrada === "4"){
     alert(calculadora.tipoDeOperacion)
   }
+
 }
-
-
-// function suma(a, b) { // declaro funcion para sumar
-//   return a + b;
-// }
-// function resta(a, b) { // funcion para restar
-//   return a - b;
-// }
-
-// let entrada = true; // hace que se inicie el bucle
-
-// let historial = []; // array vacio
-
-// while (entrada !== "4") {
-//   entrada = prompt("Ingrese '1' para hacer una suma y '2' para restar. Si desea ver el historial ingrese '3'. Si desea salir '4'"); // redeclaro la variable 
-//   if (entrada === "1") {
-//     const primerNumero = parseInt(prompt("Ingrese el primer número"));
-//     const segundoNumero = parseInt(prompt("Ingrese el segundo número"));
-//     let resultado = suma(primerNumero, segundoNumero);
-//     alert("El resultado de la suma es " + resultado);
-//     if(!isNaN(resultado)){
-//          historial.unshift(resultado); // hace push al resultado
-//     } else {
-//         alert("No es válido")
-//     }
-//   } else if (entrada === "2") {
-//     const primerNumero = parseInt(prompt("Ingrese el primer número"));
-//     const segundoNumero = parseInt(prompt("Ingrese el segundo número"));
-//     resultado = resta(primerNumero, segundoNumero);
-//     alert("El resultado de la resta es " + resultado);
-//     if(!isNaN(resultado)){
-//         historial.unshift(resultado);
-//     } else {
-//         alert("No es válido")
-//     }
-//   } else if (entrada === "3") {
-//     alert(historial);
-//   } else {
-//     alert("No es válido");
-//   }
-// }
