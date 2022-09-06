@@ -11,10 +11,19 @@ let calculadora = {
   tipoDeOperacion : "operacion",
 }
 
+function filtrarPositivo(elemento){
+  return elemento >= 0;
+}
+
+function filtrarNegativo(elemento){
+  return elemento <= -1 ;
+}
+
+
 let entrada = true; // hace que se inicie el bucle
 
-while (entrada !== "5") {
-  entrada = prompt("Ingrese '1' para hacer una suma y '2' para restar. \nSi desea ver el historial ingrese '3'.\n Si desea ver que tipo de operación realizo por ultima vez '4'. \n Si desea Si desea salir '5'"); // redeclaro la variable 
+while (entrada !== "6") {
+  entrada = prompt("Ingrese '1' para hacer una suma y '2' para restar. \nSi desea ver el historial ingrese '3'.\n Si desea ver que tipo de operación realizo por ultima vez '4'. \n Si desea saber si en su historial hay números positivos o negativos '5'\nSi desea Si desea salir '6'"); // redeclaro la variable 
   if (entrada === "1") {
     const primerNumero = parseInt(prompt("Ingrese el primer número"));
     const segundoNumero = parseInt(prompt("Ingrese el segundo número"));
@@ -41,6 +50,16 @@ while (entrada !== "5") {
     alert(calculadora.historial);
   } else if(entrada === "4"){
     alert(calculadora.tipoDeOperacion)
+  } else if(entrada === "5"){
+    const filtrado = prompt("Ingrese 'a' para ver todos los resultados positivos \n 'b' para ver los resultados negativos")
+    if(filtrado === "a"){
+      let resultado = calculadora.historial.filter(filtrarPositivo)
+      alert(resultado)
+    } else if(filtrado === "b"){
+      let resultado = calculadora.historial.filter(filtrarNegativo)
+      alert(resultado)
+    }
+  } else{
+    alert("No es válido")
   }
-
 }
